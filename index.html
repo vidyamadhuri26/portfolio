@@ -3,315 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P.Vidya Madhuri - Developer Portfolio</title>
-    
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Shivani Singh • Portfolio</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f9;
-        }
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-        /* Navigation & Header */
-        header {
-            background: #ffffff;
-            padding: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #007bff; /* Primary color */
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #007bff;
-        }
-
-        /* Sections */
-        section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* --- Hero Section & Profile Alignment --- */
-        .hero {
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            background-color: #e9efff;
-        }
-
-        .profile-area {
-            display: flex; /* Enables side-by-side layout */
-            align-items: center; /* Vertically aligns the content */
-            gap: 40px; /* Space between the image and the text */
-            width: 100%;
-        }
-
-        /* Profile Picture Styling (Circular Shape) */
-        .profile-pic-container img {
-            width: 200px; /* Size of the circle */
-            height: 200px;
-            border-radius: 50%; /* Makes it a circle */
-            object-fit: cover; /* Ensures the image covers the circle without stretching */
-            border: 5px solid #ffffff; /* White border */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero-content {
-            /* Allows the content to take up the remaining space */
-            flex-grow: 1;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-content .subtitle {
-            font-size: 1.5rem;
-            color: #555;
-            margin-bottom: 1rem;
-        }
-
-        .summary-text {
-            margin-bottom: 1.5rem;
-        }
-
-        .highlight {
-            color: #007bff;
-        }
-
-        #cta-button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-        }
-
-        #cta-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Projects Section */
-        .projects {
-            background-color: #ffffff;
-        }
-
-        .projects h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-            color: #007bff;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .project-card a {
-            color: #007bff;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-
-        /* Contact Section */
-        .contact h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-
-        .contact p {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact input[type="email"],
-        .contact textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .contact button[type="submit"] {
-            background-color: #333;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            transition: background-color 0.3s;
-        }
-
-        .contact button[type="submit"]:hover {
-            background-color: #555;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            font-size: 0.9rem;
-        }
-    </style>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- NAVBAR -->
     <header>
+        <h2 class="logo">Shivani Singh</h2>
         <nav>
-            <div class="logo">P.Vidya Madhuri</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    
-    <main>
-        <section id="about" class="hero">
-            <div class="profile-area">
-                <div class="profile-pic-container">
-                    <img src="https://github.com/vidyamadhuri26/portfolio/blob/main/Screenshot%202025-02-11%20230127.png" alt="Your professional profile photo">
-                </div>                                
-                <div class="hero-content">
-                    <h1>Hello, I'm <span class="highlight">P.Vidya Madhuri</span>.</h1>
-                    <p class="subtitle">A passionate Web Developer focused on clean, scalable code.</p>
-                    <p class="summary-text">I specialize in building responsive web applications using modern technologies like HTML, CSS, JavaScript, Python and React JS. Let's build something amazing!</p>
-                    <button id="cta-button">View My Projects</button>
-                </div>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Hello, I'm <span>Shivani Singh</span></h1>
+            <p>Software Engineering Student • Frontend Developer</p>
+            <a href="#contact" class="btn">Hire Me</a>
+            <a href="#" class="btn" style="margin-left: 10px;">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I am a passionate and dedicated B.Tech Software Engineering student with strong interest 
+            in Full-Stack Development, UI/UX Design, and building scalable web applications. 
+            I enjoy learning new technologies and constantly improving my skills to create 
+            meaningful digital experiences.
+        </p>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="about">
+        <h2 class="section-title">Education</h2>
+        <p><b>B.Tech – AI&ML Department</b><br>
+            Malla Reddy University, India<br>
+            2023 – 2027
+        </p>
+        <p>
+            CGPA (expected): <b>8.5</b>
+        </p>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skill-box">
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">HTML/CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React.js</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Git & GitHub</div>
+        </div>
+    </section>
+
+    <!-- PROJECT SECTION -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Task Manager App</h3>
+                <p>A React-based task manager using JSON Server & Axios.</p>
             </div>
-        </section>
 
-        <section id="projects" class="projects">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>PharmaHealth</h3>
-                    <p>This is an app that recommends appropriate medicines based on symptoms.</p>
-                    <a href="#" target="_blank">View Code</a> | <a href="#" target="_blank">Live Demo</a>
-                </div>
-                <div class="project-card">
-                    <h3 id="js-project-title">House Price Prediction</h3>
-                    <p id="js-project-desc">This app is used to predict house prices based on the localities.</p>
-                    <a href="#" target="_blank">View Code</a>
-                </div>
-                <div class="project-card">
-                    <h3>Dog Breed Identification</h3>
-                    <p>This app is used to predict dog breeds by analyzing uploaded images.</p>
-                    <a href="#" target="_blank">View Code</a>
-                </div>
+            <div class="project-card">
+                <h3>AgriConnect App</h3>
+                <p>Connects farmers and buyers with multilingual support.</p>
             </div>
-        </section>
 
-        <section id="contact" class="contact">
-            <h2>Get In Touch</h2>
-            <p>I'm currently looking for new opportunities. Feel free to connect!</p>
-            <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="4" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
+            <div class="project-card">
+                <h3>MediTrack App</h3>
+                <p>Medicine tracking with 1000+ categorized medicines & images.</p>
+            </div>
 
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A modern and responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-info">
+            <p>Email: <b>shivani@example.com</b></p>
+            <p>Phone: <b>+91 90000 00000</b></p>
+            <p>Location: India</p>
+            <br>
+            <p><b>Follow Me:</b></p>
+            <p>
+                <a href="#" style="color:#f1147f; text-decoration:none;">LinkedIn</a> |
+                <a href="#" style="color:#e817a2; text-decoration:none;">GitHub</a> |
+                <a href="#" style="color:#e209b6; text-decoration:none;">Instagram</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>© 2025 Shivani Singh — All Rights Reserved.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const ctaButton = document.getElementById('cta-button');
-            const jsProjectTitle = document.getElementById('js-project-title');
-            const jsProjectDesc = document.getElementById('js-project-desc');
+    <!-- JS FILE LINK -->
+    <script src="script.js"></script>
 
-            // 1. CTA Button Click Handler
-            if (ctaButton) {
-                ctaButton.addEventListener('click', () => {
-                    alert('Great choice! You are now viewing the projects section.');
-                    // Optionally scroll to the projects section
-                    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-                });
-            }
-
-            // 2. Dynamic Content Replacement using JS
-            if (jsProjectTitle && jsProjectDesc) {
-                jsProjectTitle.textContent = "Interactive JS Project";
-                jsProjectDesc.textContent = "This text was dynamically injected using JavaScript, proving the JS file is linked correctly!";
-            }
-
-            console.log('Portfolio scripts loaded and ready!');
-        });
-    </script>
 </body>
 </html>
